@@ -22,7 +22,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=ALLOWED_ORIGINS,
+    allow_origins=["*"], # 应设置为ALLOWED_ORIGINS，本地先允许所有
     allow_methods=["GET", "POST"],
     allow_credentials=True,      # ← 新增：允许跨源请求带上 cookie
 )
